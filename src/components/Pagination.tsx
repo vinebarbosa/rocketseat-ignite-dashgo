@@ -17,16 +17,16 @@ export const Pagination = () => {
 
                 <Button size="sm" fontSize="xs" width="4" colorScheme="pink" disabled _disabled={{ bg: 'pink.500', cursor: 'default' }}>
                     1
-            </Button>
+                </Button>   
                 <Button size="sm" fontSize="xs" width="4" _hover={{ bg: 'gray.500', }} bg="gray.700">
                     2
-            </Button>
+                </Button>
                 <Button size="sm" fontSize="xs" width="4" _hover={{ bg: 'gray.500', }} bg="gray.700">
                     3
-            </Button>
+                </Button>
                 <Button size="sm" fontSize="xs" width="4" _hover={{ bg: 'gray.500', }} bg="gray.700">
                     4
-            </Button>
+                </Button>
 
             </Stack>
         </Stack>
