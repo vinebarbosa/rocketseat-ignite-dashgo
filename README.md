@@ -23,11 +23,11 @@
 ## Screens 💻
 <p align="center">
 <h4>Home</h4>
-  <img width="500" src=".github/dashboard.png"/>
+  <img width="1000" src=".github/dashboard.png"/>
 <h4>Users table</h4>
-  <img width="500" src=".github/users.png"/>
+  <img width="1000" src=".github/users.png"/>
 <h4>Create new User form</h4>
-  <img width="500" src=".github/new-user.png"/>
+  <img width="1000" src=".github/new-user.png"/>
 </p>
 
 ## Contact ✉
