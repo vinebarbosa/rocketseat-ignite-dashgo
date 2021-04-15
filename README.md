@@ -33,11 +33,11 @@
 ## Responsive 📱
 <p align="center">
 <h4>Home</h4>
-  <img width="1000" src=".github/dashboard-mobile.png"/>
+  <img width="500" src=".github/dashboard-mobile.png"/>
 <h4>Users table</h4>
-  <img width="1000" src=".github/users-mobile.png"/>
+  <img width="500" src=".github/users-mobile.png"/>
 <h4>Create new User form</h4>
-  <img width="1000" src=".github/new-user-mobile.png"/>
+  <img width="500" src=".github/new-user-mobile.png"/>
 </p>
 
 ## Contact ✉
