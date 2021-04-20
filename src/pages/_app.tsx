@@ -5,19 +5,22 @@ import React from 'react'
 import { SidebarDrawerProvider } from '../contexts/SidebarDrawerContext';
 import { makeServer } from '../services/miraje';
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
+
 if (process.env.NODE_ENV === 'development') {
 	makeServer();
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<ChakraProvider resetCSS theme={theme}>
-			<QueryClientProvider client={new QueryClient()}>
+		<QueryClientProvider client={new QueryClient()}>
+			<ChakraProvider resetCSS theme={theme}>
 				<SidebarDrawerProvider>
 					<Component {...pageProps} />
 				</SidebarDrawerProvider>
-			</QueryClientProvider>
-		</ChakraProvider>
+			</ChakraProvider>
+			<ReactQueryDevtools />
+		</QueryClientProvider >
 	)
 }
 
