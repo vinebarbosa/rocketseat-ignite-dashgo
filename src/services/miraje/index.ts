@@ -1,4 +1,4 @@
-import { createServer, Factory, Model, Response } from 'miragejs'
+import { createServer, Factory, Model, Response, ActiveModelSerializer } from 'miragejs'
 import faker from 'faker';
 
 type User = {
@@ -9,6 +9,9 @@ type User = {
 
 export const makeServer = () => {
 	const server = createServer({
+		serializers: {
+			application: ActiveModelSerializer,
+		},
 		models: {
 			user: Model.extend<Partial<User>>({} as User),
 		},
@@ -21,12 +24,12 @@ export const makeServer = () => {
 					return faker.internet.email().toLowerCase();
 				},
 				createdAt() {
-					return faker.date.recent();
+					return faker.date.recent().toString();
 				},
 			})
 		},
 		seeds(server) {
-			server.createList('user', 200);
+			server.createList('user', 5);
 		},
 
 		routes() {
@@ -47,6 +50,7 @@ export const makeServer = () => {
 					{ users }
 				)
 			});
+			this.get('/users/:id');
 			this.post('/users');
 
 			// Reset para não conflitar com o api routes do next

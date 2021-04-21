@@ -28,5 +28,5 @@ const getUsers = async <T>(page: number): Promise<GetUsersResponse<T>> => {
 }
 
 export const useUsers = <T>(page: number) => {
-	return useQuery(`users:${page}`, () => getUsers<T>(page), { staleTime: 1000 * 5 });
+	return useQuery(['users', page], () => getUsers<T>(page), { staleTime: 1000 * 5 });
 }

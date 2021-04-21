@@ -4,8 +4,9 @@ import { theme } from '../styles/theme'
 import React from 'react'
 import { SidebarDrawerProvider } from '../contexts/SidebarDrawerContext';
 import { makeServer } from '../services/miraje';
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { queryClient } from '../services/queryClient';
 
 if (process.env.NODE_ENV === 'development') {
 	makeServer();
@@ -13,7 +14,7 @@ if (process.env.NODE_ENV === 'development') {
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<QueryClientProvider client={new QueryClient()}>
+		<QueryClientProvider client={queryClient}>
 			<ChakraProvider resetCSS theme={theme}>
 				<SidebarDrawerProvider>
 					<Component {...pageProps} />
