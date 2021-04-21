@@ -40,7 +40,7 @@ export const Pagination = ({
 			spacing="6"
 		>
 			<Box>
-				<strong>0</strong> - <strong>10</strong> de <strong>100</strong>
+				<strong>{(currentPage - 1) * registersPerPage}</strong> - <strong>{Math.min(currentPage * registersPerPage, totalCount)}</strong> de <strong>{totalCount}</strong>
 			</Box>
 			<Stack direction="row" spacing="2">
 				{currentPage > (1 + siblingsCount) && (

@@ -24,12 +24,12 @@ export const makeServer = () => {
 					return faker.internet.email().toLowerCase();
 				},
 				createdAt() {
-					return faker.date.recent().toString();
+					return faker.date.recent();
 				},
 			})
 		},
 		seeds(server) {
-			server.createList('user', 5);
+			server.createList('user', 200);
 		},
 
 		routes() {

@@ -19,7 +19,7 @@ type User = {
 const UserList = () => {
 	const [page, setPage] = useState(1);
 	const { data, isLoading, error, isFetching } = useUsers<User>(page);
-	console.log(data)
+
 	const isWideVersion = useBreakpointValue({
 		base: false,
 		lg: true,

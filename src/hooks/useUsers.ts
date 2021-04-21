@@ -18,7 +18,7 @@ const getUsers = async <T>(page: number): Promise<GetUsersResponse<T>> => {
 		totalCount,
 		users: data.users.map(user => ({
 			...user,
-			created_at: new Date(user.createdAt).toLocaleDateString('pt-br', {
+			created_at: new Date(user.created_at).toLocaleDateString('pt-br', {
 				day: '2-digit',
 				month: 'long',
 				year: 'numeric'
